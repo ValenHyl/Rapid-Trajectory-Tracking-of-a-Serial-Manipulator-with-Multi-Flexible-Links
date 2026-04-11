@@ -6,32 +6,43 @@
     .video-card { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
     .video-title { font-size: 1.2em; font-weight: bold; color: #2c3e50; }
     .video-desc { color: #34495e; margin: 8px 0; }
+    /* 适配iframe播放窗口样式 */
+    .quark-video { width: 640px; height: 360px; border: none; border-radius: 4px; }
   </style>
 </head>
 <body>
   <h1>论文实验视频展示</h1>
   
-  <!-- 视频1 -->
+  <!-- 视频1（替换为夸克网盘嵌入） -->
   <div class="video-card">
     <div class="video-title">实验1：催化剂合成过程</div>
     <div class="video-desc">反应温度：80℃，催化剂用量：5mg，关键现象：第30秒出现蓝色沉淀，转化率92%</div>
-    <video width="640" height="360" controls>
-      <source src="https://pan.quark.cn/s/3b4726a7246b" type="video/mp4">
-      您的浏览器不支持HTML5视频
-    </video>
+    <!-- 夸克网盘iframe嵌入（核心修改） -->
+    <iframe 
+      class="quark-video"
+      src="https://pan.quark.cn/embed/s/3b4726a7246b"  <!-- 注意：分享链接后缀保留，前面替换为embed -->
+      allowfullscreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+    >
+    </iframe>
   </div>
 
-    <!-- 视频2 -->
+    <!-- 视频2（替换为夸克网盘嵌入） -->
   <div class="video-card">
     <div class="video-title">实验2：催化剂合成过程</div>
     <div class="video-desc">反应温度：80℃，催化剂用量：5mg，关键现象：第30秒出现蓝色沉淀，转化率92%</div>
-    <video width="640" height="360" controls>
-      <source src="https://pan.quark.cn/s/9d5ca6ff3dc7" type="video/mp4">
-      您的浏览器不支持HTML5视频
-    </video>
+    <!-- 夸克网盘iframe嵌入（核心修改） -->
+    <iframe 
+      class="quark-video"
+      src="https://pan.quark.cn/s/a448d9bd0703"  <!-- 注意：分享链接后缀保留，前面替换为embed -->
+      allowfullscreen="true"
+      webkitallowfullscreen="true"
+      mozallowfullscreen="true"
+    >
+    </iframe>
   </div>
-
   
-  <!-- 更多视频重复上述结构 -->
+  <!-- 更多视频重复上述iframe结构即可 -->
 </body>
 </html>
