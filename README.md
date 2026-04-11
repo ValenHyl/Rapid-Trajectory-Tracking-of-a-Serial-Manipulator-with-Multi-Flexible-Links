@@ -1,28 +1,2 @@
 # Rapid-Trajectory-Tracking-of-a-Serial-Manipulator-with-Multi-Flexible-Links
 Backstepping-based boundary control &amp; DeepONet-Approximated output-feedback control
-<!DOCTYPE html>
-<html>
-<head>
-  <title>论文实验视频集</title>
-  <style>
-    .video-card { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
-    .video-title { font-size: 1.2em; font-weight: bold; color: #2c3e50; }
-    .video-desc { color: #34495e; margin: 8px 0; }
-  </style>
-</head>
-<body>
-  <h1>论文实验视频展示</h1>
-  
-  <!-- 视频1 -->
-  <div class="video-card">
-    <div class="video-title">实验1：催化剂合成过程</div>
-    <div class="video-desc">反应温度：80℃，催化剂用量：5mg，关键现象：第30秒出现蓝色沉淀，转化率92%</div>
-    <video width="640" height="360" controls>
-      <source src="https://www.aliyundrive.com/xxx" type="video/mp4">
-      您的浏览器不支持HTML5视频
-    </video>
-  </div>
-  
-  <!-- 更多视频重复上述结构 -->
-</body>
-</html>
