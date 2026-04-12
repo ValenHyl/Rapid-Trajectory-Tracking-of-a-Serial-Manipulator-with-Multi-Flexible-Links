@@ -1,55 +1,202 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>机械臂实验视频展示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajectory Tracking on 2DSFMR</title>
+    <!-- MathJax for LaTeX Formulas -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-        .video-card {
-            margin: 30px 0;
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 10px;
-            max-width: 800px;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
         }
-        .video-title {
-            font-size: 20px;
-            font-weight: bold;
+
+        body {
+            background-color: #f8f9fa;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .main-title {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .author-info {
+            font-size: 16px;
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .experiment-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 35px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9ecef;
+        }
+
+        .exp-title {
+            font-size: 22px;
             color: #2d3748;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            border-left: 4px solid #3498db;
+            padding-left: 12px;
         }
-        .video-desc {
+
+        .exp-desc {
+            font-size: 15px;
             color: #4a5568;
-            margin-bottom: 15px;
-            line-height: 1.5;
+            margin-bottom: 25px;
+            padding: 12px;
+            background-color: #f1f5f9;
+            border-radius: 6px;
+            line-height: 1.8;
         }
+
+        .video-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .video-item {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .video-subtitle {
+            font-size: 16px;
+            color: #34495e;
+            font-weight: 500;
+            text-align: center;
+        }
+
         video {
             width: 100%;
             border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .video-group {
+                grid-template-columns: 1fr;
+            }
+            .main-title {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <h1>多柔性连杆机械臂快速轨迹跟踪实验</h1>
+    <div class="container">
+        <!-- Header & Author (Centered) -->
+        <div class="page-header">
+            <h1 class="main-title">Rapid Trajectory Tracking of 2-DOF Serial Flexible Manipulator</h1>
+            <p class="author-info">XXX,XXX,XXX| XXXXXX</p>
+	  <p class="author-info">The detailed control design procedures and analysis of experimental results are presented in the paper Rapid Trajectory Tracking of a Serial Manipulator
+with Multi-Flexible Links.</p>
+        </div>
 
-    <!-- 视频1：替换成你的视频文件名即可 -->
-    <div class="video-card">
-        <div class="video-title">实验1：机械臂轨迹跟踪测试</div>
-        <div class="video-desc">描述：快速轨迹跟踪性能验证，响应时间≤10ms，跟踪精度±0.1mm</div>
-         <video controls>
-            <source src="./videos/link2sin2_double.mp4" type="video/mp4">
-            您的浏览器不支持视频播放
-        </video>
-    </div>
+        <!-- Experiment 1 -->
+        <div class="experiment-card">
+            <h2 class="exp-title">Experiment 1: Sinusoidal trajectory tracking</h2>
+            <p class="exp-desc">
+                $r_d=\acute r_1+\acute r_2\cos(1.2\pi t), \varphi_d=\frac{35\pi}{180}\sin(0.4\pi t)$<br>
+	      Video 1.1 shows the experimental comparison between the proposed backstepping boundary control and LQR + feedforward control. <br>
+	      Video 1.2 adds the experimental comparison of backstepping boundary control via DeepONet approximation. 
+            </p>
+            <div class="video-group">
+                <div class="video-item">
+                    <p class="video-subtitle">Video 1.1</p>
+                    <video controls>
+                        <source src="./videos/link2sin2_double.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <p class="video-subtitle">Video 1.2</p>
+                    <video controls>
+                        <source src="./videos/link2sin_ref.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
 
-    <!-- 视频2（如需添加更多视频，复制上面的模块即可） -->
-    <!--
-    <div class="video-card">
-        <div class="video-title">实验2：柔性振动抑制测试</div>
-        <div class="video-desc">描述：柔性连杆振动抑制效果展示</div>
-        <video controls>
-            <source src="./videos/exp2.mp4" type="video/mp4">
-        </video>
+        <!-- Experiment 2 -->
+        <div class="experiment-card">
+            <h2 class="exp-title">Experiment 2: Square trajectory tracking</h2>
+            <p class="exp-desc">
+                $r_d=\acute r_1+\acute r_2\mathrm{sgn}(\cos(0.4\pi t)), \varphi_d=\frac{35\pi}{180}\mathrm{sgn}(\sin(0.2\pi t))$<br>
+	      Video 1.1 shows the experimental comparison between the proposed backstepping boundary control and LQR + feedforward control. <br>
+	      Video 1.2 adds the experimental comparison of backstepping boundary control via DeepONet approximation. 
+            </p>
+            <div class="video-group">
+                <div class="video-item">
+                    <p class="video-subtitle">Video 2.1</p>
+                    <video controls>
+                        <source src="./videos/link2square2_double.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <p class="video-subtitle">Video 2.2</p>
+                    <video controls>
+                        <source src="./videos/link2square_ref.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experiment 3 -->
+        <div class="experiment-card">
+            <h2 class="exp-title">Experiment 3: Sawtooth trajectory tracking</h2>
+            <p class="exp-desc">
+                $r_d=\acute r_1+\acute r_2(\lfloor 0.4t+0.5 \rfloor-0.4t), \varphi_d=\frac{35\pi}{180}(0.2t-\lfloor 0.2t+0.5 \rfloor)$<br>
+	      Video 1.1 shows the experimental comparison between the proposed backstepping boundary control and LQR + feedforward control. <br>
+	      Video 1.2 adds the experimental comparison of backstepping boundary control via DeepONet approximation. 
+            </p>
+            <div class="video-group">
+                <div class="video-item">
+                    <p class="video-subtitle">Video 3.1</p>
+                    <video controls>
+                        <source src="./videos/link2stw2_double.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <p class="video-subtitle">Video 3.2</p>
+                    <video controls>
+                        <source src="./videos/link2stw_ref.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
     </div>
-    -->
 </body>
 </html>
