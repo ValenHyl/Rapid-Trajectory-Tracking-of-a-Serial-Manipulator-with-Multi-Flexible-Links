@@ -136,9 +136,8 @@
 
         <div class="intro-card">
             <p class="intro-desc">
-                Experimental Description: This work performs vibration suppression and trajectory tracking experiments on a 2-DOF serial flexible manipulator, with three predefined motion profiles defined in polar coordinates $(r_d, \varphi_d)$, where $r_d$ represents the tip polar radius reference and  $\varphi_d$ is the tip polar angle reference. <br>
-                Video 1.1, 2.1 and 3.1 present the comparative experimental results between the proposed backstepping boundary control scheme and the conventional LQR + feedforward control strategy. <br>
-                Video 1.2, 2.2 and 3.2 supplement the experimental results of the backstepping boundary control via DeepONet approximation.
+                This work performs vibration suppression and trajectory tracking experiments on a 2-DOF serial flexible manipulator with three predefined motion profiles defined in polar coordinates $(r_d, \varphi_d)$, where $r_d$ represents the tip polar radius reference and  $\varphi_d$ is the tip polar angle reference. <br>
+                Video 1.1, 2.1 and 3.1 present the comparative experimental results between the proposed backstepping boundary control scheme and the conventional LQR + feedforward control strategy.  Video 1.2, 2.2 and 3.2 supplement the experimental results of the backstepping boundary control via DeepONet approximation.
             </p>
         </div>
 
@@ -146,8 +145,7 @@
         <div class="experiment-card">
             <h2 class="exp-title">Experiment 1: Square trajectory tracking</h2>
             <p class="exp-desc">
-                Reference trajectory : $r_d= r_1+ r_2\mathrm{sgn}(\cos(0.4\pi t)), \varphi_d=\frac{35\pi}{180}\mathrm{sgn}(\sin(0.2\pi t))$,<br>
-                where $\mathrm{sgn}(\cdot)$ is the sign function.	
+                $r_d= r_1+ r_2\mathrm{sgn}(\cos(0.4\pi t)), \varphi_d=\frac{35\pi}{180}\mathrm{sgn}(\sin(0.2\pi t))$, where $\mathrm{sgn}(\cdot)$ is the sign function.	
             </p>
             <div class="video-group">
                 <div class="video-item">
@@ -171,8 +169,7 @@
         <div class="experiment-card">
             <h2 class="exp-title">Experiment 2: Sawtooth trajectory tracking</h2>
             <p class="exp-desc">
-                Reference trajectory : $r_d= r_1+ r_2(\lfloor 0.4t+0.5 \rfloor-0.4t), \varphi_d=\frac{35\pi}{180}(0.2t-\lfloor 0.2t+0.5 \rfloor)$,<br>
-                where $\lfloor \cdot \rfloor$ is the floor function.
+                $r_d= r_1+ r_2(\lfloor 0.4t+0.5 \rfloor-0.4t), \varphi_d=\frac{35\pi}{180}(0.2t-\lfloor 0.2t+0.5 \rfloor)$, where $\lfloor \cdot \rfloor$ is the floor function.
             </p>
             <div class="video-group">
                 <div class="video-item">
