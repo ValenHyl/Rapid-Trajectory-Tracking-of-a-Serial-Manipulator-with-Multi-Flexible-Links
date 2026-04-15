@@ -53,7 +53,6 @@
             text-align: center;
         }
 
-        /* 统一卡片样式：说明模块 + 实验模块 */
         .experiment-card, .intro-card {
             background: #ffffff;
             border-radius: 12px;
@@ -141,7 +140,7 @@
             <div class="video-group">
                 <div class="video-item">
                     <p class="video-subtitle">Video 1.1</p>
-                    <!-- 禁用下载功能：添加 controlsList="nodownload" -->
+                    <!-- controlsList="nodownload" -->
                     <video controls controlsList="nodownload">
                         <source src="./videos/link2square2_double.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -185,7 +184,7 @@
         <div class="experiment-card">
             <h2 class="exp-title">Experiment 3: Sinusoidal trajectory tracking</h2>
             <p class="exp-desc">
-                Reference trajectory : $r_d= r_1+r_2\cos(1.2\pi t), \varphi_d=\frac{35\pi}{180}\sin(0.4\pi t)$<br>
+                $r_d= r_1+r_2\cos(1.2\pi t), \varphi_d=\frac{35\pi}{180}\sin(0.4\pi t)$<br>
             </p>
             <div class="video-group">
                 <div class="video-item">
@@ -205,7 +204,6 @@
             </div>
         </div>
 
-        <!-- 页面底部：播放提示 + 权限声明（统一author-info样式） -->
         <div style="margin-top: 40px;">
             <p class="author-info">If the video cannot play smoothly, please try switching your network or browser</p>
             <p class="author-info">All content and videos are for academic research only. Unauthorized use, reproduction or distribution is prohibited</p>
