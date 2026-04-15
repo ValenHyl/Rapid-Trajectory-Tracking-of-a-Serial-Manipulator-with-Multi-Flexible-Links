@@ -50,6 +50,7 @@
             color: #7f8c8d;
             font-weight: 500;
             margin-bottom: 8px;
+            text-align: center;
         }
 
         /* 统一卡片样式：说明模块 + 实验模块 */
@@ -60,16 +61,6 @@
             margin-bottom: 35px;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
             border: 1px solid #e9ecef;
-        }
-
-        /* 说明卡片标题样式 */
-        .intro-title {
-            font-size: 22px;
-            color: #2d3748;
-            margin-bottom: 12px;
-            font-weight: 600;
-            border-left: 4px solid #3498db;
-            padding-left: 12px;
         }
 
         .exp-title {
@@ -150,14 +141,15 @@
             <div class="video-group">
                 <div class="video-item">
                     <p class="video-subtitle">Video 1.1</p>
-                    <video controls>
+                    <!-- 禁用下载功能：添加 controlsList="nodownload" -->
+                    <video controls controlsList="nodownload">
                         <source src="./videos/link2square2_double.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="video-item">
                     <p class="video-subtitle">Video 1.2</p>
-                    <video controls>
+                    <video controls controlsList="nodownload">
                         <source src="./videos/link2square_ref.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -174,14 +166,14 @@
             <div class="video-group">
                 <div class="video-item">
                     <p class="video-subtitle">Video 2.1</p>
-                    <video controls>
+                    <video controls controlsList="nodownload">
                         <source src="./videos/link2stw2_double.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="video-item">
                     <p class="video-subtitle">Video 2.2</p>
-                    <video controls>
+                    <video controls controlsList="nodownload">
                         <source src="./videos/link2stw_ref.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -198,19 +190,25 @@
             <div class="video-group">
                 <div class="video-item">
                     <p class="video-subtitle">Video 3.1</p>
-                    <video controls>
+                    <video controls controlsList="nodownload">
                         <source src="./videos/link2sin2_double.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="video-item">
                     <p class="video-subtitle">Video 3.2</p>
-                    <video controls>
+                    <video controls controlsList="nodownload">
                         <source src="./videos/link2sin_ref.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
+        </div>
+
+        <!-- 页面底部：播放提示 + 权限声明（统一author-info样式） -->
+        <div style="margin-top: 40px;">
+            <p class="author-info">If the video cannot play smoothly, please try switching your network or browser</p>
+            <p class="author-info">All content and videos are for academic research only. Unauthorized use, reproduction or distribution is prohibited</p>
         </div>
     </div>
 </body>
